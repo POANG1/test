@@ -21,9 +21,11 @@ exports.handler = function (event, context, callback) {
 				VersionId: "null"
 			}
 			*/
+			callback(null, data);
 		})
 		.catch(err => {
 			console.log(err, err.stack); // an error occurred
+			callback(err);
 		});
-	callback(null, 'Successfully executed');
+	
 }
