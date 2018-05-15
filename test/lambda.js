@@ -25,7 +25,7 @@ exports.handler = function (event, context, callback) {
 		})
 		.catch(err => {
 			console.log(err, err.stack); // an error occurred
-			callback(err);
+			callback(err.errorMessage);
 		});
 	
 }
